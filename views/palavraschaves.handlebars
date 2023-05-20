@@ -1,0 +1,48 @@
+<div class="container text-center bg-body-tertiary">
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div>
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+    <div class="col bg-white">
+           <p class="text-start text-center fs-10">Gere automaticamente 100 palavras chaves</p>
+           <p>
+                {{#each post}}
+                    {{#dataValues}}
+                        <form action="/atualizarPalavras" method="POST">
+                            <div class="mb-3 text-start">
+                                <input type="hidden" name="id" class="form-control" id="palavraschaves" value="{{id}}">
+                                <label class="form-label">Palavras Chave:</label>
+                                <textarea disabled="true" name="palavraschaves" class="form-control" id="palavraschaves" value="{{resposta}}"> 
+                            </div>
+                            <div class="mb-3 text-start">
+                                <button type="submit" class="btn btn-primary">Atualizar</button>
+                            </div>
+                        </form>
+                    {{/dataValues}}
+                {{/each}}
+            </p>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+</div>

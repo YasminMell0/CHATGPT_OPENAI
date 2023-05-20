@@ -1,0 +1,65 @@
+<div class="container text-center bg-body-tertiary">
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            <p class="text-start fs-5">Altere o produto</p>
+            <p class="text-start fs-7">Sistema para cadastro de produtos.</p>
+            <p>
+            {{#each post}}
+                    {{#dataValues}}
+                        <form action="/atualizar" method="POST">
+                            <div class="mb-3 text-start">
+                                <input type="hidden" name="id" class="form-control" id="nome" value="{{id}}">
+                                <label class="form-label">Produto</label>
+                                <input type="text" name="produto" class="form-control" id="produto" value="{{produto}}"> 
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="form-label">Marca</label>
+                                <input type="text" name="marca" class="form-control" id="marca" value="{{marca}}">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="form-label">Modelo</label>
+                                <input type="text" name="modelo" class="form-control" id="modelo" aria-describedby="emailHelp" value="{{modelo}}">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="form-label">Descrição:</label>
+                                <textarea name="descricao" class="form-control" id="descricao" style="height: 100px" >{{descricao}}</textarea>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="form-label">Palavras-Chave:</label>
+                                <textarea name="palavraschave" class="form-control"id="palavraschave" style="height: 100px" >{{palavraschaves}}</textarea>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <button type="submit" class="btn btn-dark">Atualizar</button>
+                            </div>
+                        </form>
+                    {{/dataValues}}
+                {{/each}}
+            </p>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+</div>
+</html>

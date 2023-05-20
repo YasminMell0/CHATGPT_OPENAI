@@ -1,0 +1,57 @@
+<div class="container text-center bg-body-tertiary">
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div>
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+    <div class="col bg-white">
+        <p class="text-start text-center fs-10">Será gerado uma descrição e/ou palavras chaves para o seu produto de forma automatica.</p>
+        <p>
+            <table class="rounded table table-striped-columns">
+                <thead>
+                    <tr>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Palavras Chaves</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody >
+                {{#each post}}
+                    {{#dataValues}}
+                    <tr>
+                        <td>{{produto}}</td>
+                        <td>{{descricao}}</td>
+                        <td>{{palavraschaves}}</td>
+                        <td>
+                           <button type="button" class="btn btn-dark"><a href="/descricao/{{id}}/{{produto}}/{{marca}}/{{modelo}}" style="color:inherit" style="margin-bottom: 0.5rem">Descrição</a></button>
+                            <button type="button" class="btn btn-dark"><a href="/palavraschaves/{{id}}/{{produto}}/{{marca}}/{{modelo}}" style="color:inherit">Palavras chave</a></button>
+                        </td>
+                    </tr>
+                    {{/dataValues}}
+                {{/each}}
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+</div>
+</div>
